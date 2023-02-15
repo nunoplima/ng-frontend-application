@@ -4,33 +4,33 @@ import {
   useCallback,
   useMemo,
 } from 'react'
+import Link from 'next/link'
 import sword from '@icons/sword.svg'
-import swordGold from '@icons/sword-gold.svg'
+import goldenSword from '@icons/sword-gold.svg'
 import { QuestCardProps as Props } from './types'
 import * as S from './quest-card.styles'
 
 const MAX_DIFFICULTY = 5
 
-export const QuestCard: FC<Props> = ({ quest }) => {
-  const {
-    cover,
-    difficulty,
-    experience,
-    gold,
-    skill,
-    skillTree,
-    title,
-    type,
-  } = quest
-
+export const QuestCard: FC<Props> = ({
+  id,
+  cover,
+  difficulty,
+  experience,
+  gold,
+  skill,
+  skillTree,
+  title,
+  type,
+}) => {
   const renderDifficulty = useCallback(() => {
-    const swordIcon = <S.SwordIcon src={sword} alt='sword icon' />
-    const swordGoldIcon = <S.SwordIcon src={swordGold} alt='sword icon' />
-
     const swords = []
     for (let i = 1; i <= MAX_DIFFICULTY; i++) {
-      if (i <= difficulty) swords.push(swordGoldIcon)
-      else swords.push(swordIcon)
+      if (i <= difficulty) {
+        swords.push(<S.SwordIcon key={i} src={goldenSword} alt='sword icon' />)
+      } else {
+        swords.push(<S.SwordIcon key={i} src={sword} alt='sword icon' />)
+      }
     }
 
     return <S.Swords>{swords}</S.Swords>
@@ -58,29 +58,36 @@ export const QuestCard: FC<Props> = ({ quest }) => {
   ])
 
   return (
-    <S.Container>
-      <S.Header>
-        <S.HeaderImage
-          src={cover}
-          alt='quest-image'
-          fill
-          priority
-        />
-      </S.Header>
-      <S.Body>
-        <S.Title>{title}</S.Title>
-        <S.Content>
-          {content.map(({ title, data }, index) => (
-            <Fragment key={`${title}-${index}`}>
-              <S.Label>{title}</S.Label>
-              {typeof data === 'function'
-                ? data()
-                : <S.Data>{data}</S.Data>
-              }
-            </Fragment>
-          ))}
-        </S.Content>
-      </S.Body>
-    </S.Container>
+    <Link
+      href={`/quests/${id}`}
+      passHref
+      legacyBehavior
+    >
+      <S.Container>
+        <S.Header>
+          <S.HeaderImage
+            src={cover}
+            alt='quest-image'
+            sizes='320px'
+            fill
+            priority
+          />
+        </S.Header>
+        <S.Body>
+          <S.Title>{title}</S.Title>
+          <S.Content>
+            {content.map(({ title, data }, index) => (
+              <Fragment key={`${title}-${index}`}>
+                <S.Label>{title}</S.Label>
+                {typeof data === 'function'
+                  ? data()
+                  : <S.Data>{data}</S.Data>
+                }
+              </Fragment>
+            ))}
+          </S.Content>
+        </S.Body>
+      </S.Container>
+    </Link>
   )
 }

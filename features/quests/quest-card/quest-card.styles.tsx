@@ -4,11 +4,12 @@ import Image from 'next/image'
 export const Container = styled.div(({ theme }) => `
   display: flex;
   flex-direction: column;
-  border: solid 1px ${theme.colors.lightGrey};
   height: 222px;
-  padding: ${theme.radius.l};
+  cursor: pointer;
+  border: solid 1px ${theme.colors.lightGrey};
   border-radius: calc(6px + ${theme.radius.l});
   background-color: ${theme.colors.lighterBlack};
+  padding: ${theme.radius.l};
 `)
 
 export const Header = styled.div(({ theme }) => `

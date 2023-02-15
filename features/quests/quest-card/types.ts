@@ -1,5 +1,3 @@
 import { Quest } from '@types'
 
-export type QuestCardProps = {
-  quest: Quest
-}
+export type QuestCardProps = Quest
