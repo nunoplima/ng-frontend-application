@@ -27,6 +27,10 @@ export const defaultTheme = {
 		'6xl': '140px',
 		'7xl': '160px',
 		'8xl': '180px'
+	},
+	fontFamily: {
+		primary: "'Lato', sans-serif",
+		secondary: "'Cinzel', serif",
 	}
 };
 
@@ -37,6 +41,7 @@ export const darkTheme: DefaultTheme = {
 		gold: '#BEA77E',
 		white: '#FFFFF4',
 		grey: '#8E8E8E',
+		lightGrey: '#3A3A3A80',
 		darkGrey: '#333030',
 		lighterBlack: '#1D1C1A',
 		black: '#151515',
