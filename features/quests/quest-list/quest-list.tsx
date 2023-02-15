@@ -8,9 +8,9 @@ export const QuestList: FC = () => {
 
   return (
     <S.Root>
-      {data?.map((quest) => (
+      {data?.map(quest => (
         <Fragment key={quest.id}>
-          <QuestCard quest={quest} />
+          <QuestCard {...quest} />
         </Fragment>
       ))}
     </S.Root>
