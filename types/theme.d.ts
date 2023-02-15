@@ -31,11 +31,16 @@ declare module 'styled-components' {
 			gold: string;
 			white: string;
 			grey: string;
+			lightGrey: string;
 			darkGrey: string;
 			lighterBlack: string;
 			black: string;
 			blue: string;
 			green: string;
 		};
+		fontFamily: {
+			primary: string,
+			secondary: string,
+		}
 	}
 }
