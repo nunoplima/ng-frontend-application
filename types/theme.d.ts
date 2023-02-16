@@ -41,8 +41,12 @@ declare module 'styled-components' {
 			green: string;
 		};
 		fontFamily: {
-			primary: string,
-			secondary: string,
+			primary: string;
+			secondary: string;
+		}
+		breakPoint: {
+			mobile: string;
+			desktop: string;
 		}
 	}
 }

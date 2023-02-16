@@ -32,6 +32,10 @@ export const defaultTheme = {
 	fontFamily: {
 		primary: "'Lato', sans-serif",
 		secondary: "'Cinzel', serif",
+	},
+	breakPoint: {
+		mobile: '660px',
+		desktop: '1024px',
 	}
 };
 

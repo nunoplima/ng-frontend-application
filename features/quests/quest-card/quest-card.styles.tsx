@@ -5,6 +5,7 @@ export const Container = styled.div(({ theme }) => `
   display: flex;
   flex-direction: column;
   height: 222px;
+  min-width: 332px;
   cursor: pointer;
   border: solid 1px ${theme.colors.lightGrey};
   border-radius: calc(6px + ${theme.radius.l});
@@ -44,7 +45,7 @@ export const Title = styled.div(({ theme }) => `
 export const Details = styled.div`
   margin-top: 8px;
   display: grid;
-  grid-template-columns: 64px minmax(80px, 1fr) 78px auto;
+  grid-template-columns: 22% 33% 25% 20%;
   row-gap: 10px;
 `
 

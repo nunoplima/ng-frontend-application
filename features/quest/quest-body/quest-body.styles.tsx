@@ -27,6 +27,7 @@ export const Title = styled.div(({ theme }) => `
   font-size: 20px;
   line-height: 27px;
   padding: 0 10px;
+  white-space: nowrap;
   font-family: ${theme.fontFamily.secondary};
   color: ${theme.colors.white};
 `)
