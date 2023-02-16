@@ -4,7 +4,7 @@ import * as S from './button.styles'
 
 export const Button: FC<Props> = ({ href, text }) => {
   return (
-    <S.Button href={href} shallow>
+    <S.Button href={href}>
       {text}
     </S.Button>
   )
