@@ -17,6 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "@features/*": ["./features/*"],
+      "@constants": ["./constants"],
       "@icons/*": ["./public/icons/*"],
       "@types": ["./types"],
       "@/*": ["./*"]

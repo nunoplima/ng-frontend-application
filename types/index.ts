@@ -15,7 +15,6 @@ export type Quests = Quest[]
 export type DetailedQuest =
   & Quest
   & {
-    cover: string,
     description: string,
     rewards: {
       experience: number,

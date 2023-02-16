@@ -10,6 +10,11 @@ export const Container = styled.div(({ theme }) => `
   border-radius: calc(6px + ${theme.radius.l});
   background-color: ${theme.colors.lighterBlack};
   padding: ${theme.radius.l};
+
+  :hover {
+    border-color: ${theme.colors.gold};
+    transition: border-color 400ms ease;
+  }
 `)
 
 export const Header = styled.div(({ theme }) => `
@@ -36,18 +41,12 @@ export const Title = styled.div(({ theme }) => `
   font-family: ${theme.fontFamily.secondary};
 `)
 
-export const Content = styled.div`
+export const Details = styled.div`
   margin-top: 8px;
   display: grid;
   grid-template-columns: 64px minmax(80px, 1fr) 78px auto;
   row-gap: 10px;
 `
-
-export const Swords = styled.div`
-  display: flex;
-`
-
-export const SwordIcon = styled(Image)``
 
 export const Label = styled.p(({ theme }) => `
   color: ${theme.colors.gold};

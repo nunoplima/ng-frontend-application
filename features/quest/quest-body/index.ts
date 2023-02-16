@@ -1,0 +1,1 @@
+export { Body } from './quest-body'
