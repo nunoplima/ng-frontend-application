@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
 }
 
 body {
+	all: unset;
 	${({ theme }) => (`
 		background-color: ${theme.colors.black};
 		font-family: ${theme.fontFamily.primary};

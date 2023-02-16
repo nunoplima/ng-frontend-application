@@ -8,18 +8,12 @@ import type {
   GetStaticPaths,
 } from 'next'
 import { Quest, getQuest } from '@features/quest'
+import { PageContainer } from '@features/layout'
 
 const QuestPage = () => (
-  <>
-    <Head>
-      <title>Node Guardians</title>
-      <meta name='description' content='Node Guardians frontend' />
-    </Head>
-
-    <main>
-      <Quest />
-    </main>
-  </>
+  <PageContainer title='quest details'>
+    <Quest />
+  </PageContainer>
 )
 
 export default QuestPage
