@@ -10,6 +10,12 @@ export const Header = styled.div(({ theme }) => `
   margin: 5px 5px 0 5px;
 `)
 
+export const CloseIcon = styled(Image)`
+  position: absolute;
+  right: 10px;
+  top: 10px;
+`
+
 export const HeaderImage = styled(Image)`
   object-fit: cover;
 `
