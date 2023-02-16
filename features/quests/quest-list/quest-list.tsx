@@ -7,12 +7,14 @@ export const QuestList: FC = () => {
   const { data } = useQuests()
 
   return (
-    <S.Root>
-      {data?.map(quest => (
-        <Fragment key={quest.id}>
-          <QuestCard {...quest} />
-        </Fragment>
-      ))}
-    </S.Root>
+    <S.Container>
+      <S.InnerContainer>
+        {data?.map(quest => (
+          <Fragment key={quest.id}>
+            <QuestCard {...quest} />
+          </Fragment>
+        ))}
+      </S.InnerContainer>
+    </S.Container>
   )
 }
