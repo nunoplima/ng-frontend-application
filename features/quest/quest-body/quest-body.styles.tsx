@@ -4,7 +4,6 @@ import Image from 'next/image'
 export const Body = styled.div`
   display: flex;
   flex-direction: column;
-  height: 60%;
   padding: 7px 15px 0 15px;
 `
 

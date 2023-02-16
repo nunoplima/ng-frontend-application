@@ -7,20 +7,14 @@ import {
 	getQuests,
 	QuestList
 } from '@features/quests'
+import { PageContainer } from '@features/layout'
 import type { GetStaticProps } from 'next'
 import { Quests } from '@types'
 
 const QuestsPage = () => (
-	<>
-		<Head>
-			<title>Node Guardians</title>
-			<meta name='description' content='Node Guardians frontend' />
-		</Head>
-
-		<main>
-			<QuestList />
-		</main>
-	</>
+	<PageContainer title='quests'>
+		<QuestList />
+	</PageContainer>
 )
 
 export default QuestsPage

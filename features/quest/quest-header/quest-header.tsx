@@ -10,7 +10,6 @@ export const Header: FC<Props> = ({ cover }) => (
       src={cover}
       alt='detailed-quest-image'
       sizes='743px'
-      quality={100}
       fill
       priority
     />

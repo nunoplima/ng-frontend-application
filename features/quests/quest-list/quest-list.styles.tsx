@@ -5,6 +5,6 @@ export const Root = styled.div`
   grid-template-columns: repeat(3, 1fr);
   column-gap: 24px;
   row-gap: 24px;
-  max-width: 1044px;
+  margin-top: 115px;
   padding: 6px;
 `
