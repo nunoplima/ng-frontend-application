@@ -1,0 +1,1 @@
+export type SwordsProps = { difficulty: number }
