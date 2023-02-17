@@ -6,9 +6,10 @@ import type {
   GetStaticProps,
   GetStaticPaths,
 } from 'next'
-import { getQuests } from '@features/quests'
 import { Quest, getQuest } from '@features/quest'
 import { PageContainer } from '@features/layout'
+import { queryClient } from '@api/query-client'
+import { getQuests } from '@api/get-quests'
 import { Quests } from '@types'
 
 
@@ -22,7 +23,6 @@ export default QuestPage
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const id = params?.id as string
-  const queryClient = new QueryClient()
 
   await queryClient.prefetchQuery(['quest', id],
     () => getQuest(id)

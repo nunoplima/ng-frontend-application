@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { getQuests } from './api'
+import { getQuests } from '../../../api/get-quests'
 import { Quests } from '@types'
 
 export const useQuests = () => {

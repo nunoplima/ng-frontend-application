@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { Header } from './quest-header'
 import { Body } from './quest-body'
 import { Footer } from './quest-footer'
-import { useQuest } from './queries'
+import { useQuest } from './api/use-quest'
 import { DetailedQuest} from '@types'
 import * as S from './quest.styles'
 
