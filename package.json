@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "mocked": "NEXT_PUBLIC_API_MOCKING=enabled next dev"
   },
   "dependencies": {
     "@next/font": "13.1.2",

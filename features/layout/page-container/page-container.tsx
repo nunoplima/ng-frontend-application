@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import Head from 'next/head'
 import { PageTopBar } from '../page-top-bar'
+import { ErrorBoundary } from '@features/error-boundary'
 import { PageContainerProps as Props } from './types'
 import * as S from './page-container.styles'
 
@@ -17,8 +18,10 @@ export const PageContainer: FC<Props> = ({
 
     <PageTopBar />
 
-    <S.Main>
-      {children}
-    </S.Main>
+    <ErrorBoundary>
+      <S.Main>
+        {children}
+      </S.Main>
+    </ErrorBoundary>
   </S.Container>
 )
