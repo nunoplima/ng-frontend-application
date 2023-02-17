@@ -8,9 +8,6 @@ export const PageTopBar: FC = () => (
       src={logo}
       alt='NG logo'
       width={285}
-      height={34.82}
-      priority
     />
-
   </S.Container>
 )

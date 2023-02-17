@@ -22,7 +22,7 @@ body {
 	`)
 }
 
-p {
+a, p {
 	all: unset;
 }
 

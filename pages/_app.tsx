@@ -11,6 +11,10 @@ import { ThemeProvider } from 'styled-components'
 import { darkTheme } from '@/styles/theme'
 import GlobalStyle from '@/styles/GlobalStyles'
 
+if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
+	require('../mocks')
+}
+
 const config: QueryClientConfig = {
 	defaultOptions: {
 		queries: {
