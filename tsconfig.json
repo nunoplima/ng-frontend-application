@@ -16,6 +16,7 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
+      "@api/*": ["./api/*"],
       "@features/*": ["./features/*"],
       "@constants": ["./constants"],
       "@icons/*": ["./public/icons/*"],

@@ -1,3 +1,2 @@
-export * from './api'
-export * from './queries'
+export * from './api/use-quests'
 export * from './quest-list'

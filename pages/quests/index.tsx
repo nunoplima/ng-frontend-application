@@ -1,13 +1,8 @@
-import Head from 'next/head'
-import {
-	dehydrate,
-  QueryClient,
-} from '@tanstack/react-query'
-import {
-	getQuests,
-	QuestList
-} from '@features/quests'
+import { dehydrate } from '@tanstack/react-query'
+import { QuestList } from '@features/quests'
 import { PageContainer } from '@features/layout'
+import { queryClient } from '@api/query-client'
+import { getQuests } from '@api/get-quests'
 import type { GetStaticProps } from 'next'
 import { Quests } from '@types'
 
@@ -20,8 +15,6 @@ const QuestsPage = () => (
 export default QuestsPage
 
 export const getStaticProps: GetStaticProps = async () => {
-  const queryClient = new QueryClient()
-
   await queryClient.prefetchQuery<Quests>(['quests'], getQuests)
 
   return {
