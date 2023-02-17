@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import {
   QueryClient,
   dehydrate,
@@ -7,8 +6,11 @@ import type {
   GetStaticProps,
   GetStaticPaths,
 } from 'next'
+import { getQuests } from '@features/quests'
 import { Quest, getQuest } from '@features/quest'
 import { PageContainer } from '@features/layout'
+import { Quests } from '@types'
+
 
 const QuestPage = () => (
   <PageContainer title='quest details'>
@@ -34,8 +36,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  return {
-    paths: [],
-    fallback: 'blocking'
-  }
+  const quests: Quests = await getQuests()
+
+  const paths = quests.map(({ id }) => ({
+    params: { id: id.toString() },
+  }))
+
+  return { paths, fallback: false }
 }
