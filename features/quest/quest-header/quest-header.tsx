@@ -13,7 +13,10 @@ export const Header: FC<Props> = ({ cover }) => (
       fill
       priority
     />
-    <Link href='/quests'>
+    <Link
+      data-testid='x'
+      href='/quests'
+    >
       <S.CloseIcon
         src={x}
         alt='close-icon'

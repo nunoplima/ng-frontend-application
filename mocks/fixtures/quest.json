@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "skillTree": "smartphones",
+  "skill": "Apple",
+  "title": "iPhone 9",
+  "difficulty": 2,
+  "experience": 9400,
+  "gold": 549,
+  "type": "-",
+  "cover": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+  "description": "An apple mobile which is nothing like apple",
+  "rewards": {
+    "experience": 9400,
+    "gold": 549
+  }
+}

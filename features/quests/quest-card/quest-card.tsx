@@ -43,9 +43,8 @@ export const QuestCard: FC<Props> = ({
 
   return (
     <Link
+      data-testid={`quest-${id}`}
       href={`/quests/${id}`}
-      passHref
-      legacyBehavior
     >
       <S.Container>
         <S.Header>
